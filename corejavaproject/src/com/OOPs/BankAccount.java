@@ -32,12 +32,13 @@ public class BankAccount {
 
 	public BankAccount(double balance) {
 		this.balance = balance;
-		this.balance = 5000;
 	}
 
 	public void Deposit(double amount) {
-		amount = balance + amount;
-		System.out.println("Deposit Amount : " + amount);
+		if(amount>0) {
+			amount = balance + amount;
+			System.out.println("Deposit Amount : " + amount);	
+		}
 	}
 
 	public void withdraw(double amount) {
